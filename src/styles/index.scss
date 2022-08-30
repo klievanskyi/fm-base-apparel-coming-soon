@@ -1,1 +1,35 @@
 @import '@csstools/normalize.css';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+    "header hero-image"
+    "main hero-image";
+}
+
+.base-container {
+  display: grid;
+}
+
+.hero-image {
+  grid-area: hero-image;
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 100vh;
+  }
+}
